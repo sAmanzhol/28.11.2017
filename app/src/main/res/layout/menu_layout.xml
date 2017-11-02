@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="136dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnTerminal"
+            android:layout_width="match_parent"
+            android:layout_height="146dp"
+
+            android:backgroundTint="@color/colorPrimary"
+            android:text="@string/terminals" />
+
+        <Button
+            android:id="@+id/btnPayments"
+            android:layout_width="match_parent"
+            android:layout_height="126dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="@string/payments" />
+
+        <Button
+            android:id="@+id/btnEncashment"
+            android:layout_width="match_parent"
+            android:layout_height="133dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="@string/encashment" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp"
+        android:text="Khan"
+        android:textSize="30sp" />
+</RelativeLayout>

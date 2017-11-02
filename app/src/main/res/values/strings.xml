@@ -17,4 +17,8 @@
     <string name="error_valid_email_password">Wrong Telephone number or Password</string>
     <string name="action_settings">Settings</string>
     <string name="text_hello">Hello,</string>
+    <string name="terminals">Терималы</string>
+    <string name="payments">Платежи</string>
+    <string name="encashment">Инкассация</string>
+
 </resources>
