@@ -31,14 +31,14 @@ public class MenuActivity extends Activity {
         btnPayments.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(getApplicationContext(), PaymentActivity.class);
+                Intent intent =new Intent(getApplicationContext(), PaymentFormActivity.class);
                 startActivity(intent);
             }
         });
         btnEncashment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(getApplicationContext(), PaymentActivity.class);
+                Intent intent =new Intent(getApplicationContext(), PaymentFormActivity.class);
                 startActivity(intent);
             }
         });

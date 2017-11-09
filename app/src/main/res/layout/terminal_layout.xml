@@ -1,333 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:fillViewport="true">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="136dp"
         android:orientation="vertical">
 
-
-
-        <android.support.v7.widget.AppCompatTextView
-            android:id="@+id/textViewTerminals"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:gravity="center"
-            android:text="something"
-            android:textColor="@color/colorBackground"
-            android:textSize="16sp" />
-
-
-
-
-
-
-        <LinearLayout
-            android:id="@+id/noConnectionTitleLayout"
+        <Button
+            android:id="@+id/btnOkTerminal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="180dp"
 
-            <TextView
-                android:id="@+id/noConnectionTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="No connection: "
-                android:textColor="#000" />
+            android:backgroundTint="@color/colorPrimary"
+            android:text="OK" />
 
-            <TextView
-                android:id="@+id/countNoConnectionTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3" />
-        </LinearLayout>
-
-        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
-            android:id="@+id/noConnectionExpandableLayout"
+        <Button
+            android:id="@+id/btnBadTerminal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:ael_duration="500"
-            app:ael_expanded="false"
-            app:ael_interpolator="linear"
-            app:ael_orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/noConnectionTerminals"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
-
-
-
-
-
-
-
-        <LinearLayout
-            android:id="@+id/noPaymentTitleLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/noPaymentTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="No payment: "
-                android:textColor="#000" />
-
-            <TextView
-                android:id="@+id/countNoPaymentTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3" />
-        </LinearLayout>
-
-        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
-            android:id="@+id/noPaymentnExpandableLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:ael_duration="500"
-            app:ael_expanded="false"
-            app:ael_interpolator="linear"
-            app:ael_orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/noPaymentTerminals"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
-
-
-
-
-
-
-
-
-
-
-        <LinearLayout
-            android:id="@+id/notWorkingTitleLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/notWorkingTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Not working: "
-                android:textColor="#000" />
-
-            <TextView
-                android:id="@+id/countNotWorkingTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3" />
-        </LinearLayout>
-
-        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
-            android:id="@+id/notWorkingExpandableLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:ael_duration="500"
-            app:ael_expanded="false"
-            app:ael_interpolator="linear"
-            app:ael_orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/notWorkingTerminals"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
-
-
-
-
-
-
-
-
-
-
-        <LinearLayout
-            android:id="@+id/printerErrorTitleLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/printerErrorTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Printer Error: "
-                android:textColor="#000" />
-
-            <TextView
-                android:id="@+id/countPrinterErrorTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3" />
-        </LinearLayout>
-
-        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
-            android:id="@+id/printerErrorExpandableLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:ael_duration="500"
-            app:ael_expanded="false"
-            app:ael_interpolator="linear"
-            app:ael_orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/printerErrorTerminals"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
-
-
-
-
-
-
-        <LinearLayout
-            android:id="@+id/billAcceptorErrorTitleLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/billAcceptorErrorTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Bill acceptor Error: "
-                android:textColor="#000" />
-
-            <TextView
-                android:id="@+id/countBillAcceptorErrorTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3" />
-        </LinearLayout>
-
-        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
-            android:id="@+id/billAcceptorErrorExpandableLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:ael_duration="500"
-            app:ael_expanded="false"
-            app:ael_interpolator="linear"
-            app:ael_orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/billAcceptorErrorTerminals"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
-
-
-
-
-
-        <LinearLayout
-            android:id="@+id/HDDErrorTitleLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/HDDErrorTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="HDD Error: "
-                android:textColor="#000" />
-
-            <TextView
-                android:id="@+id/countHDDErrorTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3" />
-        </LinearLayout>
-
-        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
-            android:id="@+id/HDDErrorExpandableLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:ael_duration="500"
-            app:ael_expanded="false"
-            app:ael_interpolator="linear"
-            app:ael_orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/HDDErrorTerminals"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
-
-
-
-
-
-        <LinearLayout
-            android:id="@+id/noPaperTitleLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/noPaperTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="No paper: "
-                android:textColor="#000" />
-
-            <TextView
-                android:id="@+id/countNoPaperTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3" />
-        </LinearLayout>
-
-        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
-            android:id="@+id/noPaperExpandableLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:ael_duration="500"
-            app:ael_expanded="false"
-            app:ael_interpolator="linear"
-            app:ael_orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/noPaperTerminals"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
-
-
-
-
-
-
-
-
-        <ListView
-            android:id="@+id/listView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+            android:layout_height="160dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="BAD" />
 
     </LinearLayout>
-</ScrollView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp"
+        android:text="Терминалы"
+        android:textSize="30sp" />
+</RelativeLayout>

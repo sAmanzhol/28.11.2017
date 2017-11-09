@@ -1,17 +1,13 @@
-package com.example.mk123_pc.khan.util;
+package com.example.mk123_pc.khan.util.Adapter;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.mk123_pc.khan.R;
@@ -21,8 +17,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class Adapter extends ArrayAdapter<Terminal> {
-    private static final String TAG = Adapter.class.getSimpleName();
+public class TerminalAdapter extends ArrayAdapter<Terminal> {
+    private static final String TAG = TerminalAdapter.class.getSimpleName();
 
 
 
@@ -31,7 +27,7 @@ public class Adapter extends ArrayAdapter<Terminal> {
     Context mContext;
 
     //Initialize adapter
-    public Adapter(Context context, int resource, List<Terminal> items) {
+    public TerminalAdapter(Context context, int resource, List<Terminal> items) {
         super(context, resource, items);
         mContext = context;
         mResourceId = resource;

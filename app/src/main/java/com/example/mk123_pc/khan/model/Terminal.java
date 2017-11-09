@@ -7,6 +7,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
@@ -29,7 +30,7 @@ public class Terminal {
     private String locationId;
     private String taxCommitteeId;
     private String comments;
-    private String lastPing;
+    private Date lastPing;
     private String lastIp;
     private String customNetwork;
     private String cliVersion;
@@ -176,11 +177,11 @@ public class Terminal {
         this.comments = comments;
     }
 
-    public String getLastPing() {
+    public Date getLastPing() {
         return lastPing;
     }
 
-    public void setLastPing(String lastPing) {
+    public void setLastPing(Date lastPing) {
         this.lastPing = lastPing;
     }
 
@@ -256,7 +257,19 @@ public class Terminal {
         this.amountTodayRefreshedTime = amountTodayRefreshedTime;
     }
 
-    public Terminal(String id, String state, String agentId, String feeProfileId, String createTime, String name, String address, String addInfo, String operationMode, String nds, String rnm, String simNumber, String maxBillsCount, String regionId, String locationId, String taxCommitteeId, String comments, String lastPing, String lastIp, String customNetwork, String cliVersion, String cliVersionLastUpdate, String sslCert, String sslPrivKey, String maxAmountPerDay, String amountToday, String amountTodayRefreshedTime) {
+    public Terminal() {
+    }
+
+    public Terminal(String name) {
+        this.name = name;
+    }
+
+    public Terminal(String id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public Terminal(String id, String state, String agentId, String feeProfileId, String createTime, String name, String address, String addInfo, String operationMode, String nds, String rnm, String simNumber, String maxBillsCount, String regionId, String locationId, String taxCommitteeId, String comments, Date lastPing, String lastIp, String customNetwork, String cliVersion, String cliVersionLastUpdate, String sslCert, String sslPrivKey, String maxAmountPerDay, String amountToday, String amountTodayRefreshedTime) {
         this.id = id;
         this.state = state;
         this.agentId = agentId;
@@ -310,7 +323,7 @@ public class Terminal {
                 String locationId= object.getString("locationId");
                 String taxCommitteeId= object.getString("taxCommitteeId");
                 String comments= object.getString("comments");
-                String lastPing= object.getString("lastPing");
+                Date lastPing = new Date(object.getLong("lastPing"));
                 String lastIp= object.getString("lastIp");
                 String customNetwork= object.getString("customNetwork");
                 String cliVersion= object.getString("cliVersion");
@@ -327,6 +340,31 @@ public class Terminal {
         }
 
         return terminals;
+    }
+
+    public static List<Terminal> getNameList(String jsonTerminal) {
+        List<Terminal> terminals = new ArrayList<>();
+        try {
+            JSONArray jsonArray = new JSONArray(jsonTerminal);
+
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject object = jsonArray.getJSONObject(i);
+                String id=object.getString("id");
+                String name = object.getString("name");
+
+
+                terminals.add(new Terminal(id,name));
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return terminals;
+    }
+
+    @Override
+    public String toString() {
+        return this.name;
     }
 }
 
