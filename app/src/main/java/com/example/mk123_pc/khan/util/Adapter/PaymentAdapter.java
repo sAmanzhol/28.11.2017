@@ -17,7 +17,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class PaymentAdapter  extends ArrayAdapter<Payment> {
+public class PaymentAdapter extends ArrayAdapter<Payment> {
     private static final String TAG = TerminalAdapter.class.getSimpleName();
 
 

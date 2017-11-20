@@ -45,10 +45,6 @@ public class SharedPrefs {
         return savedPhone.equals(phone) && savedPass.equals(password);
     }
 
-//    public static boolean isUserLoggedIn() {
-//
-//    }
-
     public static String getPhone(Context context) {
         SharedPreferences preferences = context.getSharedPreferences(USER_DETAILS, MODE_PRIVATE);
         return preferences.getString("phone", null);

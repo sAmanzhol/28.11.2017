@@ -342,7 +342,7 @@ public class Terminal {
         return terminals;
     }
 
-    public static List<Terminal> getNameList(String jsonTerminal) {
+    public static List<Terminal> getTermianlList(String jsonTerminal) {
         List<Terminal> terminals = new ArrayList<>();
         try {
             JSONArray jsonArray = new JSONArray(jsonTerminal);

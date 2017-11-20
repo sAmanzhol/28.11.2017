@@ -32,19 +32,11 @@ public class OkTerminalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ok_terminal_layout);
         ButterKnife.bind(this);
-
-
         tvTerminals = findViewById(R.id.textViewTerminals);
         lv =  findViewById(R.id.listView);
-
-
-
-
         sendRequest();
 
     }
-
-
     private void sendRequest() {
         RequestManager requestManager = new RequestManager(this);
 
@@ -66,8 +58,6 @@ public class OkTerminalActivity extends AppCompatActivity {
 
     List<Terminal> terminalList = new ArrayList<>();
     TerminalAdapter arrayAdapter;
-
-
 
     private void populateList(String jsonData) {
         terminalList = Terminal.getList(jsonData);

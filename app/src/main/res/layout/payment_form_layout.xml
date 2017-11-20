@@ -19,7 +19,32 @@
             android:text="Дата от и до:"
             android:textColor="@color/colorBackground"
             android:textSize="16sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date From"
+            android:onClick="showDatePickerDialogFrom" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time From"
+            android:onClick="showTimePickerDialogFrom" />
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date To"
+                android:onClick="showDatePickerDialogTo" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time To"
+                android:onClick="showTimePickerDialogTo" />
+        </LinearLayout>
         <android.support.design.widget.TextInputLayout
             android:id="@+id/textInputLayoutDateFrom"
             android:layout_width="match_parent"
@@ -36,6 +61,7 @@
                 android:maxLines="1"
                 android:textColor="@color/colorBackground" />
         </android.support.design.widget.TextInputLayout>
+
         <android.support.design.widget.TextInputLayout
             android:id="@+id/textInputLayoutDateTo"
             android:layout_width="match_parent"

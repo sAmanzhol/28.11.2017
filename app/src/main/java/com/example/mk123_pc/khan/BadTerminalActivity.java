@@ -19,31 +19,17 @@ import butterknife.ButterKnife;
 
 public class BadTerminalActivity extends AppCompatActivity {
     private static final String TAG = BadTerminalActivity.class.getSimpleName();
-
-
     private AppCompatTextView tvTerminals;
     private ListView lv;
-
-
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bad_terminal_layout);
         ButterKnife.bind(this);
-
-
         tvTerminals = findViewById(R.id.textViewTerminals);
         lv =  findViewById(R.id.listView);
-
-
-
-
         sendRequest();
-
     }
-
 
     private void sendRequest() {
         RequestManager requestManager = new RequestManager(this);
@@ -65,8 +51,6 @@ public class BadTerminalActivity extends AppCompatActivity {
 
     List<Terminal> terminalList = new ArrayList<>();
     TerminalAdapter arrayAdapter;
-
-
 
     private void populateList(String jsonData) {
         terminalList = Terminal.getList(jsonData);
