@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:fillViewport="true">
 
     <LinearLayout
@@ -26,23 +27,33 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Date From"
+
+            android:text= "  From"
+            android:drawableLeft="@mipmap/date_icon"
             android:onClick="showDatePickerDialogFrom" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Time From"
+            android:text="From"
+            android:drawableLeft="@mipmap/time_icon"
             android:onClick="showTimePickerDialogFrom" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Date To"
+                android:text="To"
+                android:drawablePadding="-10dp"
+                android:paddingLeft="25dp"
+
+                android:drawableLeft="@mipmap/date_icon"
                 android:onClick="showDatePickerDialogTo" />
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Time To"
+                android:text="To"
+                android:drawablePadding="-10dp"
+                android:paddingLeft="25dp"
+                android:drawableLeft="@mipmap/time_icon"
                 android:onClick="showTimePickerDialogTo" />
         </LinearLayout>
         <android.support.design.widget.TextInputLayout
@@ -56,7 +67,7 @@
                 android:id="@+id/textInputEditTextDateFrom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/date"
+
                 android:inputType="text"
                 android:maxLines="1"
                 android:textColor="@color/colorBackground" />
@@ -72,7 +83,7 @@
                 android:id="@+id/textInputEditTextDateTo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/date"
+
                 android:inputType="text"
                 android:maxLines="1"
                 android:textColor="@color/colorBackground" />
@@ -86,10 +97,32 @@
             android:text="Период"
             android:textColor="@color/colorBackground"
             android:textSize="16sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:layout_weight=".28"
+            android:background="@drawable/background"
+            android:orientation="horizontal">
         <Spinner
             android:id="@+id/spinnerPeriod"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:spinnerMode="dropdown"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:src="@mipmap/drop" />
+        </RelativeLayout>
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/textViewSum"
             android:layout_width="fill_parent"
@@ -140,11 +173,33 @@
             android:text="Терминалы"
             android:textColor="@color/colorBackground"
             android:textSize="16sp" />
-        <Spinner
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:layout_weight=".28"
+            android:background="@drawable/background"
+            android:orientation="horizontal">
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
 
-            android:id="@+id/spinnerTerminal"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
+                android:id="@+id/spinnerTerminal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+
+                android:spinnerMode="dropdown"  />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:src="@mipmap/drop" />
+        </RelativeLayout>
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/textViewService"
             android:layout_width="fill_parent"
@@ -154,10 +209,31 @@
             android:text="Сервис"
             android:textColor="@color/colorBackground"
             android:textSize="16sp" />
-        <Spinner
-            android:id="@+id/spinnerService"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:layout_weight=".28"
+            android:background="@drawable/background"
+            android:orientation="horizontal">
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/spinnerService"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:spinnerMode="dropdown"  />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:src="@mipmap/drop" />
+        </RelativeLayout>
 
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/textViewStatus"
@@ -168,10 +244,31 @@
             android:text="Статус"
             android:textColor="@color/colorBackground"
             android:textSize="16sp" />
-        <Spinner
-            android:id="@+id/spinnerStatus"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:layout_weight=".28"
+            android:background="@drawable/background"
+            android:orientation="horizontal">
+            <Spinner
+                android:id="@+id/spinnerStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:spinnerMode="dropdown"  />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:src="@mipmap/drop" />
+        </RelativeLayout>
 
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/textViewAccount"
@@ -208,10 +305,31 @@
             android:text="Агент"
             android:textColor="@color/colorBackground"
             android:textSize="16sp" />
-        <Spinner
-            android:id="@+id/spinnerAgent"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:layout_weight=".28"
+            android:background="@drawable/background"
+            android:orientation="horizontal">
+          <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/spinnerAgent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:spinnerMode="dropdown"  />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:src="@mipmap/drop" />
+        </RelativeLayout>
         <Button
             android:id="@+id/appCompatButtonShow"
             android:layout_width="match_parent"

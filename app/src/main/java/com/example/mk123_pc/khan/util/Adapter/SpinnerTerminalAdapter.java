@@ -4,6 +4,7 @@ package com.example.mk123_pc.khan.util.Adapter;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,7 +38,7 @@ public class SpinnerTerminalAdapter  extends ArrayAdapter<Terminal> {
 
     @NonNull
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, ViewGroup parent)  {
         SpinnerTerminalAdapter.SpinnerTerminalViewHolder stvh;
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(mResourceId, parent, false);
@@ -49,11 +50,11 @@ public class SpinnerTerminalAdapter  extends ArrayAdapter<Terminal> {
 
         // Assign the appropriate data from our alert object above
 
-        Terminal terminal = getItem(position);
-
-        stvh.tvName.setText("Id."+terminal.getId()+". Name: "+terminal.getName());
-
+       Terminal terminal = getItem(position);
+        stvh.tvName.setText( terminal.getName());
         return convertView;
+
+
     }
 
     @Override

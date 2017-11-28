@@ -37,6 +37,7 @@ public class Agent {
         List<Agent> agents = new ArrayList<>();
         try {
             JSONArray jsonArray = new JSONArray(JSONAgent);
+            agents.add(new Agent(null,"Все"));
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONArray nestedArray = jsonArray.getJSONArray(i);
                 String personId = null, name = null;

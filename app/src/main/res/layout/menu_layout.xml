@@ -18,21 +18,34 @@
             android:layout_height="146dp"
 
             android:backgroundTint="@color/colorPrimary"
-            android:text="@string/terminals" />
+            android:text="@string/terminals"
+            android:drawableLeft="@mipmap/terminal_icon"
+            android:paddingLeft="40dp"
+            android:drawablePadding="-100dp"
+
+            />
 
         <Button
             android:id="@+id/btnPayments"
             android:layout_width="match_parent"
             android:layout_height="126dp"
             android:backgroundTint="@color/colorPrimary"
-            android:text="@string/payments" />
+            android:text="@string/payments"
+            android:drawableLeft="@mipmap/payments_icon"
+            android:paddingLeft="40dp"
+            android:drawablePadding="-100dp"
+            />
 
         <Button
             android:id="@+id/btnEncashment"
             android:layout_width="match_parent"
             android:layout_height="133dp"
             android:backgroundTint="@color/colorPrimary"
-            android:text="@string/encashment" />
+            android:text="@string/encashment"
+            android:drawableLeft="@mipmap/encashment_icon"
+            android:paddingLeft="40dp"
+            android:drawablePadding="-100dp"
+            />
     </LinearLayout>
 
     <TextView

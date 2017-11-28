@@ -71,7 +71,21 @@ public class PaymentFormActivity extends Activity {
 
     PaymentDTO payment = new PaymentDTO();
     PayloadDTO payloadDTO = new PayloadDTO();
-
+    public enum State{
+        ALL("Все"),
+        COMPLETE("COMPLETE"),
+        REGISTERED("REGISTERED"),
+        PENDING("PENDING"),
+        FAILED("FAILED");
+        private String value;
+        State(String value) {
+            this.value = value;
+        }
+        @Override
+        public String toString() {
+            return value;
+        }
+    }
 
     public enum Period {
         NOTHING("-"),
@@ -114,8 +128,16 @@ public class PaymentFormActivity extends Activity {
         Calendar c = Calendar.getInstance();
         String period = (String) spinnerPeriod.getSelectedItem().toString();
       if(period=="-"){
+          if(Global.DATE_FROM==null||Global.TIME_FROM==null){
+              etDateFrom.setText(null);
+          }else{
           etDateFrom.setText(Global.DATE_FROM+Global.TIME_FROM);
+          }
+          if(Global.DATE_TO==null||Global.TIME_TO==null){
+              etDateTo.setText(null);
+          }else{
           etDateTo.setText(Global.DATE_TO+Global.TIME_TO);
+          }
       }else if (period=="1 day"){
           c.add(Calendar.DAY_OF_MONTH, -1);
           SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
@@ -190,7 +212,7 @@ public class PaymentFormActivity extends Activity {
 
     public void populateTerminalList(String jsonData) {
         SpinnerTerminalAdapter arrayAdapter;
-        List<Terminal> terminalList = Terminal.getTermianlList(jsonData);
+        List<Terminal> terminalList = Terminal.getTerminalList(jsonData);
         arrayAdapter = new SpinnerTerminalAdapter(PaymentFormActivity.this, R.layout.terminal_spinner_item_layout, terminalList);
         spinnerTerminal.setAdapter(arrayAdapter);
         arrayAdapter.notifyDataSetChanged();
@@ -212,12 +234,9 @@ public class PaymentFormActivity extends Activity {
         arrayAdapter.notifyDataSetChanged();
     }
     private void setAdapter() {
-        //Period Spinner
+
         spinnerPeriod.setAdapter(new ArrayAdapter<Period>(this, android.R.layout.simple_spinner_item, Period.values()));
-        //Status Spinner
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.state_array, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerStatus.setAdapter(adapter);
+        spinnerStatus.setAdapter(new ArrayAdapter<State>(this, android.R.layout.simple_spinner_item, State.values()));
     }
 
     public void setPaymentFilter()  {
@@ -234,9 +253,12 @@ public class PaymentFormActivity extends Activity {
         if(payloadDTO.getPersonId()==1) {
             Agent agent = (Agent) spinnerAgent.getSelectedItem();
             payment.setAgent(agent.getPersonId());
-        }else  payment.setAgent(String.valueOf(payloadDTO.getPersonId()));
+        } else  payment.setAgent(String.valueOf(payloadDTO.getPersonId()));
         String status = (String) spinnerStatus.getSelectedItem().toString();
-        payment.setStatus(status);
+        if(status=="Все"){
+            payment.setStatus(null);
+        }
+        else{payment.setStatus(status);}
         Global.setPaymentsFilters(payment.getDateFrom(), payment.getDateTo(), payment.getSumFrom(), payment.getSumTo(), payment.getTerminal(), payment.getService(), payment.getStatus(), payment.getAccount(), payment.getAgent());
     }
 

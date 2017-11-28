@@ -37,6 +37,7 @@ public class Service {
         List<Service> services = new ArrayList<>();
         try {
             JSONArray jsonArray = new JSONArray(JSONService);
+            services.add(new Service(null,"Все"));
             for(int i=0;i<jsonArray.length();i++){
                 JSONObject object=jsonArray.getJSONObject(i);
                 String id=object.getString("id");

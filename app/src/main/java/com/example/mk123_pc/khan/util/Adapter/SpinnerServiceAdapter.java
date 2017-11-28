@@ -52,7 +52,7 @@ public class SpinnerServiceAdapter  extends ArrayAdapter<Service> {
 
        Service service = getItem(position);
 
-        ssvh.tvName.setText("Id."+service.getId()+". Name: "+service.getFullName());
+        ssvh.tvName.setText(service.getFullName());
 
         return convertView;
     }

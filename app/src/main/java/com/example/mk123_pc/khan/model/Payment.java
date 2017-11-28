@@ -13,58 +13,26 @@ public class Payment {
 
     private String id;
     private String state;
-    private String stateDetails;
     private String registerTime;
-    private String submitTime;
-    private String processTime;
-    private String lastEventStatus;
-    private String receiptTime;
     private String terminalId;
-    private String providerSubmitInfo;
-    private String receiptNo;
-    private String extras;
+    private String terminalTitle;
     private String serviceId;
-    private String providerId;
+    private String serviceTitle;
     private String account;
-    private String currency;
     private String paidAmount;
     private String userAmount;
-    private String agentFee;
-    private String parentAgentFee;
-    private String processingFee;
-    private String paidAmountFtxId;
-    private String mainFtxId;
-    private String sysFeeFtxId;
-    private String agentFeeFtxId;
-    private String parentAgentFeeFtxId;
 
-    public Payment(String id, String state, String stateDetails, String registerTime, String submitTime, String processTime, String lastEventStatus, String receiptTime, String terminalId, String providerSubmitInfo, String receiptNo, String extras, String serviceId, String providerId, String account, String currency, String paidAmount, String userAmount, String agentFee, String parentAgentFee, String processingFee, String paidAmountFtxId, String mainFtxId, String sysFeeFtxId, String agentFeeFtxId, String parentAgentFeeFtxId) {
+    public Payment(String id, String state, String registerTime, String terminalId, String terminalTitle, String serviceId, String serviceTitle, String account, String paidAmount, String userAmount) {
         this.id = id;
         this.state = state;
-        this.stateDetails = stateDetails;
         this.registerTime = registerTime;
-        this.submitTime = submitTime;
-        this.processTime = processTime;
-        this.lastEventStatus = lastEventStatus;
-        this.receiptTime = receiptTime;
         this.terminalId = terminalId;
-        this.providerSubmitInfo = providerSubmitInfo;
-        this.receiptNo = receiptNo;
-        this.extras = extras;
+        this.terminalTitle = terminalTitle;
         this.serviceId = serviceId;
-        this.providerId = providerId;
+        this.serviceTitle = serviceTitle;
         this.account = account;
-        this.currency = currency;
         this.paidAmount = paidAmount;
         this.userAmount = userAmount;
-        this.agentFee = agentFee;
-        this.parentAgentFee = parentAgentFee;
-        this.processingFee = processingFee;
-        this.paidAmountFtxId = paidAmountFtxId;
-        this.mainFtxId = mainFtxId;
-        this.sysFeeFtxId = sysFeeFtxId;
-        this.agentFeeFtxId = agentFeeFtxId;
-        this.parentAgentFeeFtxId = parentAgentFeeFtxId;
     }
 
     public String getId() {
@@ -83,52 +51,12 @@ public class Payment {
         this.state = state;
     }
 
-    public String getStateDetails() {
-        return stateDetails;
-    }
-
-    public void setStateDetails(String stateDetails) {
-        this.stateDetails = stateDetails;
-    }
-
     public String getRegisterTime() {
         return registerTime;
     }
 
     public void setRegisterTime(String registerTime) {
         this.registerTime = registerTime;
-    }
-
-    public String getSubmitTime() {
-        return submitTime;
-    }
-
-    public void setSubmitTime(String submitTime) {
-        this.submitTime = submitTime;
-    }
-
-    public String getProcessTime() {
-        return processTime;
-    }
-
-    public void setProcessTime(String processTime) {
-        this.processTime = processTime;
-    }
-
-    public String getLastEventStatus() {
-        return lastEventStatus;
-    }
-
-    public void setLastEventStatus(String lastEventStatus) {
-        this.lastEventStatus = lastEventStatus;
-    }
-
-    public String getReceiptTime() {
-        return receiptTime;
-    }
-
-    public void setReceiptTime(String receiptTime) {
-        this.receiptTime = receiptTime;
     }
 
     public String getTerminalId() {
@@ -139,28 +67,12 @@ public class Payment {
         this.terminalId = terminalId;
     }
 
-    public String getProviderSubmitInfo() {
-        return providerSubmitInfo;
+    public String getTerminalTitle() {
+        return terminalTitle;
     }
 
-    public void setProviderSubmitInfo(String providerSubmitInfo) {
-        this.providerSubmitInfo = providerSubmitInfo;
-    }
-
-    public String getReceiptNo() {
-        return receiptNo;
-    }
-
-    public void setReceiptNo(String receiptNo) {
-        this.receiptNo = receiptNo;
-    }
-
-    public String getExtras() {
-        return extras;
-    }
-
-    public void setExtras(String extras) {
-        this.extras = extras;
+    public void setTerminalTitle(String terminalTitle) {
+        this.terminalTitle = terminalTitle;
     }
 
     public String getServiceId() {
@@ -171,12 +83,12 @@ public class Payment {
         this.serviceId = serviceId;
     }
 
-    public String getProviderId() {
-        return providerId;
+    public String getServiceTitle() {
+        return serviceTitle;
     }
 
-    public void setProviderId(String providerId) {
-        this.providerId = providerId;
+    public void setServiceTitle(String serviceTitle) {
+        this.serviceTitle = serviceTitle;
     }
 
     public String getAccount() {
@@ -185,14 +97,6 @@ public class Payment {
 
     public void setAccount(String account) {
         this.account = account;
-    }
-
-    public String getCurrency() {
-        return currency;
-    }
-
-    public void setCurrency(String currency) {
-        this.currency = currency;
     }
 
     public String getPaidAmount() {
@@ -211,70 +115,6 @@ public class Payment {
         this.userAmount = userAmount;
     }
 
-    public String getAgentFee() {
-        return agentFee;
-    }
-
-    public void setAgentFee(String agentFee) {
-        this.agentFee = agentFee;
-    }
-
-    public String getParentAgentFee() {
-        return parentAgentFee;
-    }
-
-    public void setParentAgentFee(String parentAgentFee) {
-        this.parentAgentFee = parentAgentFee;
-    }
-
-    public String getProcessingFee() {
-        return processingFee;
-    }
-
-    public void setProcessingFee(String processingFee) {
-        this.processingFee = processingFee;
-    }
-
-    public String getPaidAmountFtxId() {
-        return paidAmountFtxId;
-    }
-
-    public void setPaidAmountFtxId(String paidAmountFtxId) {
-        this.paidAmountFtxId = paidAmountFtxId;
-    }
-
-    public String getMainFtxId() {
-        return mainFtxId;
-    }
-
-    public void setMainFtxId(String mainFtxId) {
-        this.mainFtxId = mainFtxId;
-    }
-
-    public String getSysFeeFtxId() {
-        return sysFeeFtxId;
-    }
-
-    public void setSysFeeFtxId(String sysFeeFtxId) {
-        this.sysFeeFtxId = sysFeeFtxId;
-    }
-
-    public String getAgentFeeFtxId() {
-        return agentFeeFtxId;
-    }
-
-    public void setAgentFeeFtxId(String agentFeeFtxId) {
-        this.agentFeeFtxId = agentFeeFtxId;
-    }
-
-    public String getParentAgentFeeFtxId() {
-        return parentAgentFeeFtxId;
-    }
-
-    public void setParentAgentFeeFtxId(String parentAgentFeeFtxId) {
-        this.parentAgentFeeFtxId = parentAgentFeeFtxId;
-    }
-
     public static List<Payment> getList(String jsonPayment){
         List<Payment> payments=new ArrayList<>();
         try {
@@ -283,31 +123,17 @@ public class Payment {
                 JSONObject object=jsonArray.getJSONObject(i);
                 String id=object.getString("id");
                 String state=object.getString("state");
-                String stateDetails=object.getString("stateDetails");
                 String registerTime=object.getString("registerTime");
-                String submitTime=object.getString("submitTime");
-                String processTime=object.getString("processTime");
-                String lastEventStatus=object.getString("lastEventStatus");
-                String receiptTime=object.getString("receiptTime");
-                String terminalId=object.getString("terminalId");
-                String providerSubmitInfo=object.getString("providerSubmitInfo");
-                String receiptNo=object.getString("receiptNo");
-                String extras=object.getString("extras");
-                String serviceId=object.getString("serviceId");
-                String providerId=object.getString("providerId");
+                String terminalId=object.getJSONObject("terminal").getString("id");
+                String terminalTitle=object.getJSONObject("terminal").getString("title");
+                String serviceId=object.getJSONObject("service").getString("id");
+                String serviceTitle=object.getJSONObject("service").getString("title");
                 String account=object.getString("account");
-                String currency=object.getString("currency");
+
                 String paidAmount=object.getString("paidAmount");
                 String userAmount=object.getString("userAmount");
-                String agentFee=object.getString("agentFee");
-                String parentAgentFee=object.getString("parentAgentFee");
-                String processingFee=object.getString("processingFee");
-                String paidAmountFtxId=object.getString("paidAmountFtxId");
-                String mainFtxId=object.getString("mainFtxId");
-                String sysFeeFtxId=object.getString("sysFeeFtxId");
-                String agentFeeFtxId=object.getString("agentFeeFtxId");
-                String parentAgentFeeFtxId=object.getString("parentAgentFeeFtxId");
-                payments.add(new Payment(id,state,stateDetails,registerTime,submitTime,processTime,lastEventStatus,receiptTime,terminalId,providerSubmitInfo,receiptNo,extras, serviceId, providerId, account, currency,paidAmount, userAmount, agentFee, parentAgentFee,  processingFee, paidAmountFtxId, mainFtxId, sysFeeFtxId, agentFeeFtxId, parentAgentFeeFtxId));
+
+                payments.add(new Payment(id, state, registerTime, terminalId, terminalTitle, serviceId, serviceTitle, account, paidAmount,userAmount));
 
 
             }

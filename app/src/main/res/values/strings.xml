@@ -28,14 +28,9 @@
     <string name="date_button_set">Set Date</string>
     <string name="date_view_set">The Date is: </string>
     <string name="date_selected"></string>
-    <string-array name="period_array">
-        <item>-</item>
-        <item>1 day</item>
-        <item>1 weak</item>
-        <item>1 month</item>
-        <item>1 year</item>
-    </string-array>
+
     <string-array name="state_array">
+        <item>Все</item>
         <item>REGISTERED</item>
         <item>PENDING</item>
         <item>COMPLETE</item>

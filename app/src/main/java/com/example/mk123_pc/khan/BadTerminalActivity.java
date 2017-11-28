@@ -61,16 +61,19 @@ public class BadTerminalActivity extends AppCompatActivity {
         List<Terminal> ok = new ArrayList<>();
 
         for (Terminal terminal : terminalList) {
+
             long currentTIme = System.currentTimeMillis();
             long timeDiff = currentTIme - terminal.getLastPing().getTime();
             final int minute = 60 * 1000;
 
-            if (timeDiff > 5 * minute) {
-                bad.add(terminal);
-            } else {
-                ok.add(terminal);
+                if (timeDiff > 5 * minute) {
+
+                    bad.add(terminal);
+                } else {
+                    ok.add(terminal);
+                }
             }
-        }
+
 
         arrayAdapter = new TerminalAdapter(BadTerminalActivity.this, R.layout.item_terminal, bad);
 

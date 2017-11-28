@@ -53,7 +53,7 @@ public class SpinnerAgentAdapter  extends ArrayAdapter<Agent> {
 
         Agent agent= getItem(position);
 
-        savh.tvName.setText("Id."+agent.getPersonId()+". Name: "+agent.getName());
+        savh.tvName.setText(agent.getName());
 
         return convertView;
     }

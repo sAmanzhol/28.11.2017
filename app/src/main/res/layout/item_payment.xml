@@ -22,13 +22,7 @@
         android:paddingBottom="2dip"
         android:textColor="@color/colorBackground" />
 
-    <TextView
-        android:id="@+id/stateDetails"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="stateDetails"
-        android:paddingBottom="2dip"
-        android:textColor="@color/colorBackground" />
+
     <TextView
         android:id="@+id/registerTime"
         android:layout_width="fill_parent"
@@ -37,77 +31,24 @@
         android:paddingBottom="2dip"
         android:textColor="@color/colorBackground" />
 
-    <TextView
-        android:id="@+id/submitTime"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="2dip"
-        android:text="submitTime"
-        android:textColor="@color/colorBackground" />
-    <TextView
-        android:id="@+id/processTime"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="2dip"
-        android:text="processTime"
-        android:textColor="@color/colorBackground" />
-    <TextView
-        android:id="@+id/lastEventStatus"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="2dip"
-        android:text="lastEventStatus"
-        android:textColor="@color/colorBackground" />
-    <TextView
-        android:id="@+id/receiptTime"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="2dip"
-        android:text="receiptTime"
-        android:textColor="@color/colorBackground" />
-    <TextView
-        android:id="@+id/terminalId"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="2dip"
-        android:text="terminalId"
-        android:textColor="@color/colorBackground" />
-    <TextView
-        android:id="@+id/providerSubmitInfo"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="2dip"
-        android:text="providerSubmitInfo"
-        android:textColor="@color/colorBackground" />
-    <TextView
-        android:id="@+id/receiptNo"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="2dip"
-        android:text="receiptNo"
-        android:textColor="@color/colorBackground" />
-    <TextView
-        android:id="@+id/extras"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="2dip"
-        android:text="extras"
-        android:textColor="@color/colorBackground" />
 
     <TextView
-        android:id="@+id/serviceId"
+        android:id="@+id/terminalTitle"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="2dip"
-        android:text="serviceId"
+        android:text="Terminal Name"
         android:textColor="@color/colorBackground" />
+
+
     <TextView
-        android:id="@+id/providerId"
+        android:id="@+id/serviceTitle"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="2dip"
-        android:text="providerId"
+        android:text="Service Name"
         android:textColor="@color/colorBackground" />
+
     <TextView
         android:id="@+id/account"
         android:layout_width="fill_parent"
@@ -115,13 +56,7 @@
         android:paddingBottom="2dip"
         android:text="account"
         android:textColor="@color/colorBackground" />
-    <TextView
-        android:id="@+id/currency"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="2dip"
-        android:text="currency"
-        android:textColor="@color/colorBackground" />
+
 
     <TextView
         android:id="@+id/paidAmount"
@@ -137,63 +72,7 @@
         android:paddingBottom="2dip"
         android:text="userAmount"
         android:textColor="@color/colorBackground" />
-    <TextView
-        android:id="@+id/agentFee"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="2dip"
-        android:text="agentFee"
-        android:textColor="@color/colorBackground" />
-    <TextView
-        android:id="@+id/parentAgentFee"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="2dip"
-        android:text="parentAgentFee"
-        android:textColor="@color/colorBackground" />
 
-    <TextView
-        android:id="@+id/processingFee"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="2dip"
-        android:text="processingFee"
-        android:textColor="@color/colorBackground" />
-    <TextView
-        android:id="@+id/paidAmountFtxId"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="2dip"
-        android:text="paidAmountFtxId"
-        android:textColor="@color/colorBackground" />
-    <TextView
-        android:id="@+id/mainFtxId"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="2dip"
-        android:text="mainFtxId"
-        android:textColor="@color/colorBackground" />
-    <TextView
-        android:id="@+id/sysFeeFtxId"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="2dip"
-        android:text="sysFeeFtxId"
-        android:textColor="@color/colorBackground" />
-    <TextView
-        android:id="@+id/agentFeeFtxId"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="2dip"
-        android:text="agentFeeFtxId"
-        android:textColor="@color/colorBackground" />
-    <TextView
-        android:id="@+id/parentAgentFeeFtxId"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="2dip"
-        android:text="parentAgentFeeFtxId"
-        android:textColor="@color/colorBackground" />
 
 
 </LinearLayout>
